@@ -1,0 +1,182 @@
+<script>    
+  window.onload = function(){     
+    var eventError = document.getElementsByClassName("errorMessage errMsg");
+    if (eventError) {
+      for (var i = 0; i < eventError.length; i++) {
+        var evtError = eventError[i];
+        var evtChildrens = evtError.children;
+        for (var j = 0; j < evtChildrens.length; j++) {
+          var evtChild = evtChildrens[j];
+          console.log('ErrorLog:' + evtChild.outerHTML);
+          if(evtChild.outerHTML == '<ul><li><a href="#Chargent" class="errMsg">Could not run Chargent Apex method AuthorizeOpportunity_Click(OpportunityId</a></li></ul>' || 
+            evtChild.outerHTML == '<ul><li><a href="#Chargent" class="errMsg">Could not run Chargent Apex method ChargeOpportunity_Click(OpportunityId</a></li></ul>'){
+            evtChild.outerHTML = "<span class='notbold'>There appears to be a problem with the payment. Please check that you have entered the correct credit card numbers and try again. If this problem occurs again then please contact Foundations on (02) 8345 9137, or email mirig@montefiorehome.com.au. Thank You.</span>";
+          }
+        }
+      }
+    }
+      
+  }
+    
+</script>
+
+<style>
+label,
+.matrixLayout .headerRow th
+{
+color:#203468;
+font-family:"Josefin Sans", sans-serif;
+font-size:16px !important;
+}
+
+input[type="text"]{
+background-color:#fef1e5 !important;
+border:none !important;
+border-radius:0 !important;
+margin-bottom:15px !important;
+height:40px !important;
+color:#203468 !important;
+font-family:"Josefin Sans", sans-serif !important;
+font-size:16px !important;
+}
+
+.wFormContainer .wForm
+{
+padding:0px !important;
+border-radius:0px !important;
+background-image:none !important;
+}
+
+.matrixLayout tr
+{
+margin-bottom:1px;
+}
+
+.wForm .alternate-0,
+.wForm .alternate-1
+{
+background-color:#a4dbe8 !important;
+border-bottom:3px solid #fff !important;
+}
+
+
+.wFormContainer .inputWrapper select
+{
+height:40px !important;
+border:none !important;
+border-radius:0px !important;
+background-color:#a4dbe8 !important;
+outline: 2px inset #a4dbe8; outline-offset:-1px;
+outline-style:solid !important;
+}
+
+label span 
+{
+background-color:transparent !important;
+color:#203468 !important; 
+}
+
+.wForm .matrixLayout .label {
+    padding: 10px 2px 9px 8px !important;
+}
+
+.wFormContainer form .oneFieldWrapper, .wFormContainer form .section:not(fieldset):not(.pageSection) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+  .wForm div > div.oneField
+  {
+  margin-top:2px !important;
+  }
+  
+  
+  .wfTabNav .wfTabNavLabel
+{
+color: #203468;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px !important;
+
+}
+
+.wfTabNav a.wfTab,
+.wfPagingButtons input,
+.actions .primaryAction
+{
+
+font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    background: #ad9e6e !important;
+    color: #203468 !important;
+    font-weight: 700 !important;;
+    padding: 0.9375rem 1rem 0.5625rem 1.0625rem;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.25rem;
+    border: 0 !important;
+border-radius:0px !important;
+}
+
+.wfTabNav a.wfTab:hover,
+.wfPagingButtons input:hover,
+.actions .primaryAction:hover
+{
+    background: #a299e3 !important;
+}
+
+.wfTabNav a.wfTabCurrentPage
+{
+background-color: #a299e3 !important;
+}
+  
+  #content-text
+  {
+   color: #203468 !important; 
+   font-family:"Josefin Sans", sans-serif !important;
+   font-size:16px !important; 
+  }
+  
+  
+  .wFormContainer .wForm .wFormTitle,
+.wfCurrentPage h4
+{
+font-weight: 700 !important;
+position: relative;
+padding-bottom: 1rem !important;;
+margin-bottom: 0rem;
+line-height: initial;
+font-family: "Playfair Display", serif !important;
+font-size:2.3125rem !important;
+color:#203468 !important;
+}
+
+.wfCurrentPage h4
+{
+font-size:1.5rem!important;
+ }
+
+
+.wFormContainer .wForm .wFormTitle:after,
+.wfCurrentPage h4:after
+{
+    content: '';
+    width: 70px;
+    height: 1px;
+    background: #50be9f;
+    position: absolute;
+    bottom: 0.01rem;
+    left: 0;
+}
+
+.wfCurrentPage h4:after
+{
+    bottom: 0.01rem;
+    left: 0;
+}
+
+.wForm .pageSection > h4
+{
+margin-bottom:25px !important;
+}
+</style>
